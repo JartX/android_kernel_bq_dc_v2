@@ -69,6 +69,11 @@ const struct linux_logo * __init_refok fb_find_logo(int depth)
 		/* Generic Linux logo */
 		logo = &logo_linux_vga16;
 #endif
+
+#ifdef CONFIG_LOGO_OMNIC2_CLUT224
+    /* Custom Linux logo */
+    logo = &logo_omnic2_clut224;
+#endif
 #ifdef CONFIG_LOGO_BLACKFIN_VGA16
 		/* Blackfin processor logo */
 		logo = &logo_blackfin_vga16;
