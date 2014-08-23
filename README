@@ -1,3 +1,41 @@
+	E.P.D. Center.
+
+|||||Las fuentes se descargan de la siguiente forma:
+|||||
+||||| $ git clone https://github.com/EPDCenterSpain/bq-DC-v2.git
+||||| 
+|||||Y se compilan así:
+|||||
+||||| $ make curie2_442_defconfig (Para 4.4.2)	curie2_OMNI_defconfig (Para OMNIROM)
+|||||
+|||||
+||||| $ make -jX kernel.img   Nota: Debéis sustitui la "X" de "make -jX" por el número de hilos de vuestro procesador.
+|||||
+|||||
+||||| 
+||||| 
+
+
+
+
+
+
+Agradecimientos a : 
+
+-God.
+
+-Crewrktablets.
+
+-fefifofum.
+
+-teshawolf.
+
+-bq.
+
+
+
+
+
 	Linux kernel release 3.x <http://kernel.org/>
 
 These are the release notes for Linux version 3.  Read them carefully,
