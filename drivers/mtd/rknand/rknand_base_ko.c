@@ -17,6 +17,7 @@
 #include <linux/mtd/partitions.h>
 #include <linux/mutex.h>
 #include <linux/kthread.h>
+#include <linux/ktime.h>
 #include <linux/reboot.h>
 #include <asm/io.h>
 #include <asm/mach/flash.h>
@@ -233,6 +234,19 @@ static int rknand_write(struct mtd_info *mtd, loff_t from, size_t len,
 	return 0;
 }
 
+static int rknand_discard(struct mtd_info *mtd, loff_t from, size_t len)
+{
+	int ret = 0;
+	int sector = len>>9;
+	int LBA = (int)(from>>9);
+	//printk("rknand_discard: from=%x,sector=%x,\n",(int)LBA,sector);
+    if(sector && gpNandInfo->ftl_discard)
+    {
+		ret = gpNandInfo->ftl_discard(LBA, sector);
+    }
+	return ret;
+}
+
 static int rknand_erase(struct mtd_info *mtd, struct erase_info *instr)
 {
 	int ret = 0;
@@ -398,6 +412,7 @@ static int rknand_info_init(struct rknand_info *nand_info)
 	mtd->unpoint = NULL;
 	mtd->read = rknand_read;
 	mtd->write = rknand_write;
+       mtd->discard = rknand_discard;
 	mtd->read_oob = NULL;
 	mtd->write_oob = NULL;
 	mtd->panic_write = rknand_panic_write;

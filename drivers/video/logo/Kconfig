@@ -35,6 +35,10 @@ config LOGO_OMNIC2_CLUT224
     bool "OmniROM logo C2"
    default y
 
+config LOGO_OMNIE2_CLUT224
+    bool "OmniROM logo E2"
+   default y
+
 
 config LOGO_BLACKFIN_VGA16
 	bool "16-colour Blackfin Processor Linux logo"
