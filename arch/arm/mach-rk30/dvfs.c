@@ -169,36 +169,42 @@ static int g_logic_high_arm = 100 * 1000;
 static struct cpufreq_frequency_table arm_high_logic_table[] = {
         {.frequency = 1416 * DVFS_KHZ, .index = 0 * DVFS_MV},
         {.frequency = 1608 * DVFS_KHZ, .index = 0 * DVFS_MV},
-        {.frequency = CPUFREQ_TABLE_END},
+        {.frequency = 1704 * DVFS_KHZ, .index = 0 * DVFS_MV},
+	{.frequency = CPUFREQ_TABLE_END},
 };
 
 static struct cpufreq_frequency_table logic_high_arm_table[] = {
         {.frequency = 1008 * DVFS_KHZ, .index = 50 * DVFS_MV},
         {.frequency = 1608 * DVFS_KHZ, .index = 50 * DVFS_MV},
-        {.frequency = CPUFREQ_TABLE_END},
+        {.frequency = 1704 * DVFS_KHZ, .index = 50 * DVFS_MV},
+	{.frequency = CPUFREQ_TABLE_END},
 };
 #elif defined(CONFIG_ARCH_RK30XX)
 static struct cpufreq_frequency_table arm_high_logic_table[] = {
         {.frequency = 1416 * DVFS_KHZ, .index = 50 * DVFS_MV},
         {.frequency = 1608 * DVFS_KHZ, .index = 100 * DVFS_MV},
-        {.frequency = CPUFREQ_TABLE_END},
+        {.frequency = 1704 * DVFS_KHZ, .index = 100 * DVFS_MV},
+	{.frequency = CPUFREQ_TABLE_END},
 };
 static struct cpufreq_frequency_table logic_high_arm_table[] = {
         {.frequency = 816 * DVFS_KHZ,  .index = 200 * DVFS_MV},
         {.frequency = 1416 * DVFS_KHZ, .index = 150 * DVFS_MV},
         {.frequency = 1608 * DVFS_KHZ, .index = 100 * DVFS_MV},
+	{.frequency = 1704 * DVFS_KHZ, .index = 50 * DVFS_MV},
 };
 #else
 static struct cpufreq_frequency_table arm_high_logic_table[] = {
         {.frequency = 1416 * DVFS_KHZ, .index = 0 * DVFS_MV},
         {.frequency = 1608 * DVFS_KHZ, .index = 0 * DVFS_MV},
-        {.frequency = CPUFREQ_TABLE_END},
+        {.frequency = 1704 * DVFS_KHZ, .index = 0 * DVFS_MV},
+	{.frequency = CPUFREQ_TABLE_END},
 };
 
 static struct cpufreq_frequency_table logic_high_arm_table[] = {
         {.frequency = 1008 * DVFS_KHZ, .index = 50 * DVFS_MV},
         {.frequency = 1608 * DVFS_KHZ, .index = 50 * DVFS_MV},
-        {.frequency = CPUFREQ_TABLE_END},
+        {.frequency = 1704 * DVFS_KHZ, .index = 50 * DVFS_MV},
+	{.frequency = CPUFREQ_TABLE_END},
 };
 #endif
 

@@ -3106,7 +3106,8 @@ static struct dvfs_arm_table dvfs_cpu_logic_table[] = {
 	{.frequency = 1272 * 1000,	.cpu_volt = 1225 * 1000,	.logic_volt = 1200 * 1000},//1.150V/1.100V
 	{.frequency = 1416 * 1000,	.cpu_volt = 1300 * 1000,	.logic_volt = 1200 * 1000},//1.225V/1.100V
 	{.frequency = 1512 * 1000,	.cpu_volt = 1350 * 1000,	.logic_volt = 1250 * 1000},//1.300V/1.150V
-	{.frequency = 1608 * 1000,	.cpu_volt = 1425 * 1000,	.logic_volt = 1300 * 1000},//1.325V/1.175V
+	{.frequency = 1608 * 1000,	.cpu_volt = 1375 * 1000,	.logic_volt = 1300 * 1000},//1.325V/1.175V
+	{.frequency = 1704 * 1000,      .cpu_volt = 1425 * 1000,        .logic_volt = 1300 * 1000},//1.325V/1.175V
 	{.frequency = CPUFREQ_TABLE_END},
 };
 #else
@@ -3134,10 +3135,10 @@ int gpu_freq_max = 266;
 #else
 struct cpufreq_frequency_table dvfs_gpu_table[] = {
 	{.frequency = 266 * 1000,	.index = 1050 * 1000},
-	{.frequency = 400 * 1000,	.index = 1275 * 1000},
+	{.frequency = 740 * 1000,	.index = 1350 * 1000},
 	{.frequency = CPUFREQ_TABLE_END},
 };
-int gpu_freq_max = 400;
+int gpu_freq_max = 740;
 #endif
 
 struct cpufreq_frequency_table dvfs_gpu_table_266[] = {
@@ -3147,12 +3148,12 @@ struct cpufreq_frequency_table dvfs_gpu_table_266[] = {
 
 struct cpufreq_frequency_table dvfs_gpu_table_400[] = {
 	{.frequency = 266 * 1000,	.index = 1050 * 1000},
-	{.frequency = 400 * 1000,	.index = 1275 * 1000},
+	{.frequency = 740 * 1000,	.index = 1350 * 1000},
 	{.frequency = CPUFREQ_TABLE_END},
 };
 static struct cpufreq_frequency_table dvfs_ddr_table[] = {
 	{.frequency = 300 * 1000,	.index = 1050 * 1000},
-	{.frequency = 400 * 1000,	.index = 1125 * 1000},
+	{.frequency = 690 * 1000,	.index = 1250 * 1000},
 	{.frequency = CPUFREQ_TABLE_END},
 };
 

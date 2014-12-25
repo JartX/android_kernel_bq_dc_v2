@@ -310,8 +310,8 @@ static int rk30_cpu_init(struct cpufreq_policy *policy)
 
 #if !defined(CONFIG_ARCH_RK3066B)
 #if defined(CONFIG_ARCH_RK30)
-		/* Limit gpu frequency between 133M to 400M */
-		dvfs_clk_enable_limit(gpu_clk, 133000000, 400000000);
+		/* Limit gpu frequency between 133M to 740M */
+		dvfs_clk_enable_limit(gpu_clk, 133000000, 740000000);
 #endif
 #endif
 
